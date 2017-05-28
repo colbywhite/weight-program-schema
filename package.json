@@ -1,0 +1,14 @@
+{
+  "name": "weight-program-schema",
+  "version": "0.0.1",
+  "description": "An open-source JSON schema for defining weightlifting programs",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Colby M. White",
+  "license": "ISC",
+  "devDependencies": {
+    "jsonschema": "^1.1.1",
+    "mocha": "^3.4.2"
+  }
+}

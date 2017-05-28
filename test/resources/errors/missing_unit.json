@@ -1,0 +1,8 @@
+{
+  "source": "https://stronglifts.com/5x5#Quick_Overview",
+  "schedule":
+  {
+    "type": "MWF",
+    "order": ["A", "B"]
+  }
+}

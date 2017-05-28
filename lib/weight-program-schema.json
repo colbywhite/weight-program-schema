@@ -1,0 +1,38 @@
+{
+  "schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "required": ["unit"],
+  "properties": {
+    "source": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "string",
+      "enum": ["pounds", "kilograms"]
+    },
+    "workouts": {
+      "type": "array"
+    },
+    "schedule": {
+      "$ref": "#/definitions/schedule"
+    }
+  },
+  "definitions": {
+    "schedule": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["MWF"]
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
