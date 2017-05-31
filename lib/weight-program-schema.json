@@ -4,6 +4,7 @@
   "required": ["unit"],
   "properties": {
     "source": {
+      "format": "uri",
       "type": "string"
     },
     "unit": {
