@@ -12,13 +12,48 @@
       "enum": ["pounds", "kilograms"]
     },
     "workouts": {
-      "type": "array"
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/workout"
+      }
     },
     "schedule": {
       "$ref": "#/definitions/schedule"
     }
   },
   "definitions": {
+    "workout": {
+      "type": "object",
+      "required": ["name", "exercises"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "exercises": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/exercise"
+          }
+        }
+      }
+    },
+    "exercise": {
+      "type": "object",
+      "required": ["name", "sets", "reps"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "sets": {
+          "$ref": "#/definitions/positiveInt"
+        },
+        "reps": {
+          "$ref": "#/definitions/positiveInt"
+        }
+      }
+    },
     "schedule": {
       "type": "object",
       "required": ["type"],
@@ -29,11 +64,16 @@
         },
         "order": {
           "type": "array",
+          "minItems": 1,
           "items": {
             "type": "string"
           }
         }
       }
+    },
+    "positiveInt": {
+      "type": "integer",
+      "minimum": 1
     }
   }
 }
