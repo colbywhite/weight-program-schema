@@ -51,6 +51,19 @@
         },
         "reps": {
           "$ref": "#/definitions/positiveInt"
+        },
+        "load": {
+          "$ref": "#/definitions/load"
+        }
+      }
+    },
+    "load": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["incremental"]
         }
       }
     },
@@ -68,6 +81,27 @@
           "items": {
             "type": "string"
           }
+        },
+        "duration": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": ["indefinite", "optional indefinite"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "unit": {
+                  "type": "string",
+                  "enum": ["weeks", "days"]
+                }
+              }
+            }
+          ]
         }
       }
     },

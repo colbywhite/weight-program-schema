@@ -79,6 +79,7 @@
   "schedule":
   {
     "type": "MWF",
-    "order": ["A", "B"]
+    "order": ["A", "B"],
+    "duration": "optional indefinite"
   }
 }
