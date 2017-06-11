@@ -70,7 +70,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["MWF"]
+          "enum": ["MWF", "5-2"]
         },
         "order": {
           "type": "array",
