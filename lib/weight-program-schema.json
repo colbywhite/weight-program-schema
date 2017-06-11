@@ -92,8 +92,7 @@
               "type": "object",
               "properties": {
                 "value": {
-                  "type": "integer",
-                  "minimum": 1
+                  "$ref":"#/definitions/positiveInt"
                 },
                 "unit": {
                   "type": "string",
