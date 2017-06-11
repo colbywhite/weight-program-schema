@@ -58,14 +58,11 @@
       }
     },
     "load": {
-      "type": "object",
-      "required": ["type"],
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["incremental"]
-        }
-      }
+      "oneOf": [
+        { "$ref": "#/definitions/incrementalLoad" },
+        { "$ref": "#/definitions/percentageLoad" },
+        { "$ref": "#/definitions/bucketLoad" }
+      ]
     },
     "schedule": {
       "type": "object",
@@ -104,9 +101,53 @@
         }
       }
     },
+    "incrementalLoad": {
+      "type": "object",
+      "required": ["type", "increment", "from"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["incremental"]
+        },
+        "increment": {
+          "$ref": "#/definitions/positiveInt"
+        },
+        "from": {
+          "type": "string",
+          "enum": ["lastSuccess"]
+        }
+      }
+    },
+    "percentageLoad": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["percentage"]
+        },
+        "percent": {
+          "$ref": "#/definitions/percentage"
+        },
+        "of": {
+          "type": "string",
+          "enum": ["1RM", "lastSuccess"]
+        }
+      }
+    },
+    "bucketLoad": {
+      "type": "string",
+      "enum": ["low", "moderate", "high"]
+    },
     "positiveInt": {
       "type": "integer",
       "minimum": 1
+    },
+    "percentage": {
+      "allOf": [
+        {"$ref": "#/definitions/positiveInt"},
+        {"maximum": 100}
+      ]
     }
   }
 }
