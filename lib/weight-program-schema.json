@@ -1,8 +1,11 @@
 {
   "schema": "http://json-schema.org/schema#",
   "type": "object",
-  "required": ["unit"],
+  "required": ["unit", "name", "workouts", "schedule"],
   "properties": {
+    "name": {
+      "type": "string"
+    },
     "source": {
       "format": "uri",
       "type": "string"
