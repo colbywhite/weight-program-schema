@@ -1,13 +1,11 @@
 const utils = require('./utils');
 const validate = require('jsonschema').validate;
-const schema = require('../lib/weight-program-schema');
+const schemas = require('../index');
 
-['stronglifts', 'candito_squat'].forEach((example) => {
-  describe(example, () => {
+[schemas.stronglifts, schemas.candito_squat].forEach((example) => {
+  describe(example.source, () => {
     it('should pass schema', () => {
-      const filename = `./resources/${example}`
-      const example_routine = require(filename)
-      const validation_result = validate(example_routine, schema)
+      const validation_result = validate(example, schemas._schema)
       utils.assert_no_validation_errors(validation_result)
     });
   });
