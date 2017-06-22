@@ -6,14 +6,12 @@ workouts in a format that can be read by multiple workout apps.
 
 # Usage
 ```
-const schemas = require('weight-program-schema')
+const WPS = require('weight-program-schema')
 // The raw JSON schema definition:
-console.log(schemas._schema)
+console.log(WPS._schema)
 
-// Several example definitions that follow the schema are provided:
-console.log(schemas.stronglifts)
-console.log(schemas.candito_squat)
-
+// An array of example definitions that follow the schema are provided:
+console.log(WPS.programs)
 ```
 
 # Schema File

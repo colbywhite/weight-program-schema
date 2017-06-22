@@ -1,11 +1,11 @@
 const utils = require('./utils');
 const validate = require('jsonschema').validate;
-const schemas = require('../index');
+const WPS = require('../index');
 
-[schemas.stronglifts, schemas.candito_squat].forEach((example) => {
+WPS.programs.forEach((example) => {
   describe(example.name, () => {
     it('should pass schema', () => {
-      const validation_result = validate(example, schemas._schema)
+      const validation_result = validate(example, WPS._schema)
       utils.assert_no_validation_errors(validation_result)
     });
   });
