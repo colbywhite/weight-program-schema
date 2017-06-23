@@ -2,9 +2,8 @@
   "name": "Candito 9-Week Squat",
   "source": "http://www.canditotraininghq.com/free-programs",
   "unit": "pounds",
-  "workouts": [
-    {
-      "name": "W1D1",
+  "workouts": {
+    "W1D1": {
       "exercises": [
         {
           "name": "Squat",
@@ -23,8 +22,8 @@
           "load": "high"
         }
       ]
-    }, {
-      "name": "W1D2",
+    },
+    "W1D2": {
       "exercises": [
         {
           "name": "Squat",
@@ -43,8 +42,8 @@
           "load": "high"
         }
       ]
-    }, {
-      "name": "W1D3",
+    },
+    "W1D3": {
       "exercises": [
         {
           "name": "Squat",
@@ -63,8 +62,8 @@
           "load": "high"
         }
       ]
-    }, {
-      "name": "W1D4",
+    },
+    "W1D4": {
       "exercises": [
         {
           "name": "Squat",
@@ -83,8 +82,8 @@
           "load": "high"
         }
       ]
-    }, {
-      "name": "W1D5",
+    },
+    "W1D5": {
       "exercises": [
         {
           "name": "Squat",
@@ -104,7 +103,7 @@
         }
       ]
     }
-  ],
+  },
   "schedule":
   {
     "type": "5-2",
