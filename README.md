@@ -10,13 +10,13 @@ const WPS = require('weight-program-schema')
 // The raw JSON schema definition:
 console.log(WPS._schema)
 
-// An array of example definitions that follow the schema are provided:
-console.log(WPS.programs)
+// A method for calculating a day-by-day schedule based on a given program definition
+console.log(WPS.schedule_calculator(program))
 ```
 
 # Schema File
 
-The schema is located at [`lib/weight-program-schema.json`](lib/weight-program-schema.json)
+The schema is located at [`src/weight-program-schema.json`](src/weight-program-schema.json)
 and uses the standard [JSON Schema](http://json-schema.org).
 
 # Schema Tests
