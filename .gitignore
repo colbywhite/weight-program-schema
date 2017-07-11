@@ -3,3 +3,4 @@ node_modules/
 src/**/*.js
 src/**/*.d.ts
 !src/typings.d.ts
+npm-debug.log
