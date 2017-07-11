@@ -1,9 +1,9 @@
-module.exports = (input, options = {}) => {
+export function mwf(input: any, options: Options = {}): any[] {
   const order = input.schedule.order,
     workouts = input.workouts,
     maxDays = options.maxDays || 42,
-    sked = [];
-  var i = 0
+    sked: any[] = [];
+  var i: number = 0
 
   while (sked.length < maxDays) {
     const currentDay = sked.length % 7
@@ -17,4 +17,8 @@ module.exports = (input, options = {}) => {
     }
   }
   return sked;
+}
+
+export interface Options {
+  maxDays?: number
 }

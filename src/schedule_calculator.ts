@@ -1,17 +1,17 @@
-const validate = require('jsonschema').validate
+import {validate} from 'jsonschema'
+import {mwf} from './schedule/mwf'
 const _schema = require('./weight-program-schema')
-const MWF = require('./schedule/mwf')
 
-const isValid = (input) => {
+const isValid = (input: any): boolean => {
   return validate(input, _schema).errors.length == 0
 }
 
-module.exports = (input, options = {}) => {
+export default function calc(input: any, options: any = {}): any[] {
   if (!isValid(input)) {
     console.warn('Invalid input given!')
   }
   if (input.schedule.type == 'MWF') {
-    return MWF(input, options)
+    return mwf(input, options)
   }
   return []
 }
