@@ -5,7 +5,7 @@
   "scripts": {
     "test": "mocha",
     "clean": "find src -type f ! -name typings.d.ts \\( -name *.js -o -name *.d.ts \\) -delete",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "build": "tsc"
   },
   "main": "src/index.js",
