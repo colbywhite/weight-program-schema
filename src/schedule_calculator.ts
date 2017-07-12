@@ -1,6 +1,6 @@
 import {validate} from 'jsonschema'
 import {mwf} from './schedule/mwf'
-const _schema = require('./weight-program-schema')
+import * as _schema from './weight-program-schema.json'
 
 const isValid = (input: any): boolean => {
   return validate(input, _schema).errors.length == 0
