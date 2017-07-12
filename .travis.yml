@@ -4,8 +4,6 @@ node_js:
 cache:
   directories:
     - node_modules
-before_deploy:
-  - npm run clean
 deploy:
   provider: npm
   email: colbywhite@users.noreply.github.com
