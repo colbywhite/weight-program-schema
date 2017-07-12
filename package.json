@@ -1,6 +1,6 @@
 {
   "name": "weight-program-schema",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An open-source JSON schema for defining weightlifting programs",
   "scripts": {
     "test": "mocha",

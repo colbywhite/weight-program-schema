@@ -5,10 +5,10 @@ cache:
   directories:
     - node_modules
 deploy:
-  provider: npm
+  skip_cleanup: true
   email: colbywhite@users.noreply.github.com
   api_key:
     secure: QcI8GHmvCRsMOwmTNo/pEibpFJabBD0wMQag9EpZLnT1F8jIdjqDTJBSD7J4P2c5wMkgFgvQgNOFvM3imRBeBi2JZwZGh/+oP3C3alHKHP+syshSUVEQTKLiVUNxiHEzJcgDbU5omYPEAGgOLBd/80eWmRmPgo0QKNR9Pb1VyTvfaJWBpwO1E9KVB6mp28OGjq14SPeC26WvW+U79nxY0KhLXbKyueVG+CpoIunnel+5AU6F4k/7S/oM3bQ+x2Tz7mwdnUNudhWnqL9/zUO9NaHhe8NC2r9/08nAF47AxGzqziTVmMaoUz2mtHke33zeaxIXE9R1LcesMz8x2LeizArpOJFN59tGxLxPMWALATAhsZZJ2BdM71lUL12xtU1qxCSTT4Lojpz8PS5WwVyHMbTNWJpEXWpSzrNziPnnxMZ0tr6EDKfWfewRDxrIW4LQ+MR2SykjssW9J4u6TRowx88ZRjmfF6AiKPpgFJ1oFyDHDyY/px0+DsB5vBpWMugiF96CmWdnf54glwGBUq/yi76mS2xvT3s9qwDOjNShOtYVcia41tXPklxmhCxW8r/Ssuui4zgrUYx2y6jKb8YUK1Fc97Vkk3KhNZO5z9uLGOlFuzmbgIZlGsH2o/KBBlLoUXUBtLOQ5GHNVSuPLKUuWW5stwrhUOvi/6tVcEzrujU=
   on:
-    tags: true
+    branch: master
     repo: colbywhite/weight-program-schema
