@@ -1,6 +1,7 @@
-import {mwf as mwf_calc} from '../../src/schedule/mwf';
-const stronglifts = require('../resources/stronglifts')
 import { expect } from 'chai';
+import {mwf as mwf_calc} from '../../src/schedule/mwf';
+import {Program} from '../../src/index'
+const stronglifts: Program = require('../resources/stronglifts')
 
 describe('mwf', () => {
   let results: any[]
@@ -19,11 +20,11 @@ describe('mwf', () => {
   })
 
   it('should correctly add rest days', () => {
-    const rest = 'rest'
-    expect(results[0]).to.equal(rest)
-    expect(results[2]).to.equal(rest)
-    expect(results[4]).to.equal(rest)
-    expect(results[6]).to.equal(rest)
+    const rest = JSON.stringify({rest: true})
+    expect(JSON.stringify(results[0])).to.equal(rest)
+    expect(JSON.stringify(results[2])).to.equal(rest)
+    expect(JSON.stringify(results[4])).to.equal(rest)
+    expect(JSON.stringify(results[6])).to.equal(rest)
   })
 
   it('should correctly add lift days', () => {
