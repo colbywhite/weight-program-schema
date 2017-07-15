@@ -1,3 +1,4 @@
 -r ts-node/register
 --watch-extensions ts
+
 ./test/**/*.ts

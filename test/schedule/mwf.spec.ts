@@ -20,7 +20,7 @@ describe('mwf', () => {
   })
 
   it('should correctly add rest days', () => {
-    const rest = JSON.stringify({rest: true})
+    const rest:string = JSON.stringify({rest: true})
     expect(JSON.stringify(results[0])).to.equal(rest)
     expect(JSON.stringify(results[2])).to.equal(rest)
     expect(JSON.stringify(results[4])).to.equal(rest)
