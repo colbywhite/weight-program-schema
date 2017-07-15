@@ -4,7 +4,7 @@ export function mwf(input: Program, options: Options = {}): any[] {
   const order = input.schedule.order,
     workouts = input.workouts,
     maxDays = options.maxDays || 42,
-    sked: any[] = [];
+    sked: any[] = []
   var i: number = 0
 
   while (sked.length < maxDays) {

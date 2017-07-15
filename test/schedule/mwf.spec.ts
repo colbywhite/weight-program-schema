@@ -1,7 +1,6 @@
-import { expect } from 'chai';
 import {mwf as mwf_calc} from '../../src/schedule/mwf';
-import {Program} from '../../src/index'
-const stronglifts: Program = require('../resources/stronglifts')
+import { expect } from 'chai';
+const stronglifts = require('../resources/stronglifts')
 
 describe('mwf', () => {
   let results: any[]
