@@ -17,10 +17,17 @@ export interface Exercise {
   load: Load
 }
 
+export interface ExtendedDuration {
+    unit: string
+    value: number
+}
+
+export type Duration = string | ExtendedDuration
+
 export interface Program {
   name: string
   source: string
   unit: string
   workouts: {[key: string]: {exercises: Exercise[]}}
-  schedule: {type: string, order: string[], duration: string}
+  schedule: {type: string, order: string[], duration: Duration}
 }
